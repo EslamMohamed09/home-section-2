@@ -1,0 +1,118 @@
+* {margin:0;padding:0;
+    text-transform:capitalize;
+    box-sizing:border-box;
+    transition: all .4s linear;
+    font-family:'Exo 2',sans-serif;
+    scroll-behavior:smooth;
+    text-decoration:none !important;}
+
+*::selection {background:orange;}
+
+
+.btn {position:relative;
+      z-index:0;
+      transition:.5s linear;}
+
+.btn::before {content:'';
+              position:absolute;
+              top:0;left:0;
+              height:100%;
+              width:100%;
+              background:coral;
+              z-index:-1;
+              clip-path:circle(0% at 0% 0%);
+              border-radius:3rem;
+              transition:0.5s linear;}
+
+.btn:hover::before {clip-path:circle(100%);}
+
+
+/*****************************
+  # Header
+*****************************/
+header {width:100%;
+        z-index:1000;
+        display:flex;
+        position:fixed;
+        top:0;left:0;}
+
+header .navbar {display:flex;
+                flex-wrap:wrap;       
+                justify-content:space-around;
+                width:100%;}
+
+header .navbar .logo {width:6rem;}
+
+header .navbar ul {list-style:none;
+                   margin:auto 0; 
+                   display:flex; 
+                   flex-wrap:wrap;}
+
+header .navbar ul li {margin:0 .1rem;
+                      padding:.4rem 1.3rem;
+                      border-radius:3rem;
+                      cursor:pointer;}
+
+header .navbar ul li a {font-size:1.2rem;
+                        position:relative;
+                        color:#fff;}
+
+header .navbar ul li:hover a {color:orange;}
+
+header .navbar ul li a::after {content:'';
+                               background:orange;
+                               width:0;
+                               height:2px;
+                               position:absolute;
+                               left:50%;
+                               bottom:-8px;
+                               transform:translateX(-50%);
+                               transition:width 0.3s;}
+
+header .navbar ul li a:hover::after {width:90%;}
+
+header .navbar #hi {color:#fff;
+                    font-size:1.2rem;
+                    cursor:pointer;}
+
+header .navbar #hi:hover {color:orange;}
+
+
+/*****************************
+  # Home
+*****************************/
+.home {margin:0;
+       padding:0;
+       height:50rem;}
+
+.home .video-background {min-width:100%;
+                         min-height:100%;
+                         position:absolute;
+                         right:0;bottom:0;
+                         min-width:100%;
+                         min-height:100%;
+                         width:auto;
+                         height:auto;
+                         z-index:-1;}
+
+.home .home-info {text-align:center;
+                  margin-top:19rem;}
+
+.home .home-info h1 {color:#fff;
+                     text-shadow:0 0 5px rgb(5, 5, 5);
+                     font-weight:bold;
+                     letter-spacing:5px;
+                     margin-bottom:2rem;}
+
+.home .home-info .btn {font-size:1.3rem;
+                       padding:0.3rem 1.5rem;
+                       color:#fff;
+                       border:1px solid coral;
+                       margin:0 0.5rem;
+                       border-radius:3rem;}
+
+.home .home-info .btn:last-child {background:coral;}
+
+.home .home-info .btn:hover {border:1px solid coral;}
+
+
